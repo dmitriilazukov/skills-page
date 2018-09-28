@@ -10,10 +10,10 @@
     <link rel='stylesheet' href='/dist/bundle.css'/>
     <link rel="stylesheet" href="/css/vendor/font-awesome.min.css">
     <!--[if lt IE10] -->
-    <link rel="stylesheet" href="/dist/legacy.css">
+    <link rel="stylesheet" href="/css/core/legacy.css">
     <!--[endif] -->
     <!--[if !IE] -->
-    <link rel="stylesheet" href="/dist/not-legacy.css">
+    <link rel="stylesheet" href="/css/core/not-legacy.css">
     <!--[endif] -->
 </head>
 <body>
@@ -24,6 +24,9 @@
     NOSCRIPT DETECTED
 </div>
 <script>
+    Element.prototype.remove = function () {
+        this.parentElement.removeChild(this);
+    };
     document.getElementById('noscript').remove();
 </script>
 {% block body %}{% endblock %}
