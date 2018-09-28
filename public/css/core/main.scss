@@ -1,0 +1,51 @@
+@import "../components/desktop";
+@import "../components/taskbar";
+@import "../components/tray";
+@import "../components/start_button";
+@import "../components/start_menu";
+@import "../components/window";
+
+@font-face {
+  font-family: "MS Sans Serif Default";
+  src: url("/fonts/ms_sans_serif.ttf");
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+html, body {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  height: 100%;
+  font-family: "MS Sans Serif Default", "Microsoft Sans Serif";
+}
+
+.win98 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.vertical-line {
+  border-left: 2px solid #716e6e;
+  border-right: 2px solid #f9f9f9;
+  width: 0;
+  margin: 5px 0 5px 0;
+  &:hover {
+    cursor: ew-resize;
+  }
+}
+
+.horizontal-line {
+  border-top: 1px solid #716e6e;
+  border-bottom: 1px solid #f9f9f9;
+  height: 0;
+  margin: 0 5px 0 5px;
+}

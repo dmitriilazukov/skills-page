@@ -1,0 +1,7 @@
+.old-browser{
+    display: block !important;
+}
+
+#root{
+    display: none;
+}

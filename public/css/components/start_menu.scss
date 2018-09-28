@@ -1,0 +1,58 @@
+@import "../core/constants";
+
+.start-menu {
+  @extend %generic_shadow;
+  background-color: $system_default_color;
+  position: absolute;
+  left: 3px;
+  bottom: #{0 - $generic_shadow_size*2};
+  width: $start_menu_width;
+  height: 300px;
+  display: flex;
+  z-index: 40;
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: $generic_shadow_size 0px $generic_shadow_size $generic_shadow_size;
+    width: 20px;
+    height: calc(100% - #{$generic_shadow_size*2});
+    background: #0000F9;
+    background: -webkit-linear-gradient(bottom, #0000F9, #020080);
+    background: -moz-linear-gradient(bottom, #0000F9, #020080);
+    background: linear-gradient(to top, #0000F9, #020080);
+  }
+  &__logo-text {
+    display: flex;
+    font-size: 19px;
+    line-height: 25px;
+    transform: rotate(-90deg);
+    color: white;
+  }
+  &_hidden {
+    display: none !important;
+  }
+  &__itemlist {
+    display: flex;
+    width: calc(100% - #{$generic_shadow_size*2});
+    flex-direction: column-reverse;
+  }
+  &__item {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    font-size: $default_font_size;
+    cursor: default;
+    &:hover {
+      background-color: $system_highlight_color;
+      color: $sytem_highlight_text_color;
+    }
+    &-text {
+      align-self: center;
+      display: flex;
+    }
+    &-img {
+      display: flex;
+    }
+  }
+}

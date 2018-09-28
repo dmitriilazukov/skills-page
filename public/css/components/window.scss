@@ -1,0 +1,141 @@
+@import "../core/constants";
+
+.window {
+  &_windowed {
+    @extend %generic_shadow;
+    padding: $generic_shadow_size + 1;
+  }
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  min-height: 150px;
+  max-width: calc(100%);
+  position: absolute;
+  cursor: default;
+  background-color: $system_default_color;
+  &__header {
+    padding-left: 5px;
+    padding-right: 1px;
+    height: $window_header_height;
+    font-size: $header_font_size;
+    background-color: $system_inactive_color;
+    color: $sytem_highlight_text_color;
+    &_active {
+      background-color: $system_highlight_color;
+    }
+    &-img {
+      float: left;
+      padding-top: $generic_shadow_size;
+      margin-right: 5px;
+      width: $header_font_size;
+      height: $header_font_size;
+    }
+    &-title {
+      display: inline-block;
+      float: left;
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &-button {
+      @extend %generic_shadow_thin;
+      display: flex;
+      font-weight: bold;
+      justify-content: center;
+      line-height: $header_button_height;
+      float: right;
+      font-size: 16px;
+      background-color: $system_default_color;
+      color: $system_default_text_color;
+      width: $header_button_height;
+      height: $header_button_height;
+      margin: 3px 1px 3px 1px;
+      padding-top: 1px;
+
+      .fa {
+        display: flex;
+        align-self: center;
+      }
+    }
+  }
+  &__body {
+    width: 100%;
+    height: calc(100% - #{$window_header_height});
+  }
+  &_hidden {
+    display: none !important;
+  }
+
+  &__border {
+    $border_width: $generic_shadow_size + 5;
+    $corner_offset: -#{$border_width};
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &-left {
+      position: absolute;
+      top: 0;
+      left: -#{2*$generic_shadow_size};
+      height: 100%;
+      width: $border_width;
+      cursor: e-resize;
+    }
+    &-top {
+      position: absolute;
+      cursor: n-resize;
+      top: -#{2*$generic_shadow_size};;
+      left: 0;
+      height: $border_width;
+      width: 100%;
+    }
+    &-bottom {
+      cursor: s-resize;
+      position: absolute;
+      bottom: -#{2*$generic_shadow_size};;
+      right: 0;
+      height: $border_width;
+      width: 100%;
+    }
+    &-right {
+      cursor: w-resize;
+      position: absolute;
+      bottom: 0;
+      right: -#{2*$generic_shadow_size};;
+      height: 100%;
+      width: $border_width;
+    }
+    &-topleft {
+      position: absolute;
+      top: $corner_offset;
+      left: $corner_offset;
+      width: $border_width;
+      height: $border_width;
+      cursor: nw-resize;
+    }
+    &-topright {
+      position: absolute;
+      top: $corner_offset;
+      right: $corner_offset;
+      width: $border_width;
+      height: $border_width;
+      cursor: ne-resize;
+    }
+    &-bottomright {
+      position: absolute;
+      bottom: $corner_offset;
+      right: $corner_offset;
+      width: $border_width;
+      height: $border_width;
+      cursor: se-resize;
+    }
+    &-bottomleft {
+      position: absolute;
+      bottom: $corner_offset;
+      left: $corner_offset;
+      width: $border_width;
+      height: $border_width;
+      cursor: sw-resize;
+    }
+  }
+}

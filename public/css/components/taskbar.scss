@@ -1,0 +1,45 @@
+@import "../core/constants";
+
+%generic_taskbar_window {
+  display: flex;
+  padding: 5px;
+  flex-shrink: 0;
+  margin: 5px 0 5px 5px;
+  font-size: $default_font_size;
+}
+
+.taskbar {
+  @extend %generic_shadow;
+  display: flex;
+  cursor: default;
+  height: $taskbar_height;
+  width: 100%;
+  background-color: $system_default_color;
+  &__container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  &__window {
+    @extend %generic_shadow_inverted;
+    @extend %generic_taskbar_window;
+    background-color: $system_taskbar_window_active;
+    &_collapsed {
+      @extend %generic_shadow;
+      @extend %generic_taskbar_window;
+      background-color: $system_default_color;
+    }
+    &-text {
+      display: flex;
+      overflow: hidden;
+      align-self: center;
+    }
+    &-img {
+      display: flex;
+      overflow: hidden;
+      margin-right: 2px;
+      width: $default_font_size + 3px;
+      height: $default_font_size + 3px;
+    }
+  }
+}

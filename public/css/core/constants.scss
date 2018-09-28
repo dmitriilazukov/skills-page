@@ -1,0 +1,50 @@
+//-------------------------------------------------COLORS
+$desktop_background_color: #027f80;
+$system_default_color: #c0c0c0;
+$system_highlight_color: #020080;
+$sytem_highlight_text_color: #e6e9ff;
+$system_default_text_color: #020003;
+$system_left_top_shadow: #fbffff;
+$system_right_bottom_shadow: #001e2c;
+$system_inactive_color: #85898d;
+$system_taskbar_window_active: #e1e1e3;
+//------------------------------------------------HEIGHTS
+$taskbar_height: 35px;
+$generic_shadow_size: 2px;
+$window_header_height: 25px;
+$start_menu_width: 250px;
+$default_font_size: 14px;
+$header_font_size: 17px;
+$header_button_height: $window_header_height - 5px;
+//------------------------------------------------CLASSES
+%generic_shadow {
+  -webkit-box-shadow: inset #{-$generic_shadow_size} -$generic_shadow_size 0px 0px $system_right_bottom_shadow, inset $generic_shadow_size $generic_shadow_size 0px 0px $system_left_top_shadow;
+  -moz-box-shadow: inset #{-$generic_shadow_size} -$generic_shadow_size 0px 0px $system_right_bottom_shadow, inset $generic_shadow_size $generic_shadow_size 0px 0px $system_left_top_shadow;
+  box-shadow: inset #{-$generic_shadow_size} -$generic_shadow_size 0px 0px $system_right_bottom_shadow, inset $generic_shadow_size $generic_shadow_size 0px 0px $system_left_top_shadow;
+}
+
+%generic_shadow_inverted {
+  -webkit-box-shadow: inset $generic_shadow_size $generic_shadow_size 0px 0px $system_right_bottom_shadow, inset #{-$generic_shadow_size} -$generic_shadow_size 0px 0px $system_left_top_shadow;
+  -moz-box-shadow: inset $generic_shadow_size $generic_shadow_size 0px 0px $system_right_bottom_shadow, inset #{-$generic_shadow_size} -$generic_shadow_size 0px 0px $system_left_top_shadow;
+  box-shadow: inset $generic_shadow_size $generic_shadow_size 0px 0px $system_right_bottom_shadow, inset #{-$generic_shadow_size} -$generic_shadow_size 0px 0px $system_left_top_shadow;
+}
+
+%generic_shadow_inverted_thin {
+  $generic_shadow_size: 1px;
+  -webkit-box-shadow: inset $generic_shadow_size $generic_shadow_size 0px 0px $system_right_bottom_shadow, inset #{-$generic_shadow_size} -$generic_shadow_size 0px 0px $system_left_top_shadow;
+  -moz-box-shadow: inset $generic_shadow_size $generic_shadow_size 0px 0px $system_right_bottom_shadow, inset #{-$generic_shadow_size} -$generic_shadow_size 0px 0px $system_left_top_shadow;
+  box-shadow: inset $generic_shadow_size $generic_shadow_size 0px 0px $system_right_bottom_shadow, inset #{-$generic_shadow_size} -$generic_shadow_size 0px 0px $system_left_top_shadow;
+}
+
+%generic_shadow_thin {
+  $generic_shadow_size: 1px;
+  -webkit-box-shadow: inset #{-$generic_shadow_size} -$generic_shadow_size 0px 0px $system_right_bottom_shadow, inset $generic_shadow_size $generic_shadow_size 0px 0px $system_left_top_shadow;
+  -moz-box-shadow: inset #{-$generic_shadow_size} -$generic_shadow_size 0px 0px $system_right_bottom_shadow, inset $generic_shadow_size $generic_shadow_size 0px 0px $system_left_top_shadow;
+  box-shadow: inset #{-$generic_shadow_size} -$generic_shadow_size 0px 0px $system_right_bottom_shadow, inset $generic_shadow_size $generic_shadow_size 0px 0px $system_left_top_shadow;
+}
+
+%pointer_on_hover {
+  &:hover {
+    cursor: pointer;
+  }
+}

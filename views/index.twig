@@ -1,0 +1,10 @@
+{% extends 'layout.twig' %}
+{% block body %}
+<div id="root"></div>
+{% endblock %}
+{%block bottom_js%}
+<script>
+    window.initialState = {{initialState}}
+</script>
+<script src="/dist/bundle.js"></script>
+{%endblock%}

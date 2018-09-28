@@ -1,0 +1,46 @@
+@import "../core/constants";
+
+.desktop {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  flex-direction: column;
+  align-content: flex-start;
+  height: calc(100% - #{$taskbar_height});
+  background-color: $desktop_background_color;
+  &__selection {
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    border: 2px dotted $system_default_color;
+  }
+  &__icon {
+    display: flex;
+    cursor: default;
+    flex-direction: column;
+    width: 105px;
+    margin: 5px;
+    font-weight: lighter;
+    font-size: $default_font_size;
+    &_selected {
+      background-color: $system_highlight_color;
+      border: 1px dotted $system_default_color;
+    }
+    &-text {
+      margin-top: 5px;
+      text-align: center;
+      display: inline-block;
+      align-self: center;
+      word-break: break-word;
+      color: $sytem_highlight_text_color;
+    }
+    &-image {
+      display: flex;
+      align-self: center;
+      justify-self: center;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
