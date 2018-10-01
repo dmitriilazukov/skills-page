@@ -171,7 +171,8 @@ class Window extends React.Component {
             const {clientX, clientY} = getClientCoords(e);
             this._resizeClientY = clientY;
             this._resizeClientX = clientX;
-            this._targetBorder = parseInt(e.target.dataset['border']);
+            const border = e.target.getAttribute('data-border');
+            this._targetBorder = parseInt(border);
             this.setState({borderResizing: true});
             this.setWindowActive();
         }
