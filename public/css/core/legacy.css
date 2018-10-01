@@ -1,3 +1,7 @@
 #old-browser{
-    display: block !important;
+    display: none;
+}
+
+.legacy{
+    display: none !important;
 }

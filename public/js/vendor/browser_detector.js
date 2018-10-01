@@ -71,7 +71,6 @@ var BrowserDetector = function () {
         this.isMobile = data.isMobile;
         this.browser = this.__detectBrowser().identity;
         this.version = this.__detectVersion();
-
     };
     this.init();
 };

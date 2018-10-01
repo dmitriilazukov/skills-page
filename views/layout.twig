@@ -9,15 +9,10 @@
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/dist/bundle.css'/>
     <link rel="stylesheet" href="/css/vendor/font-awesome.min.css">
-    <!--[if lt IE10] -->
     <link rel="stylesheet" href="/css/core/legacy.css">
-    <!--[endif] -->
-    <!--[if !IE] -->
-    <link rel="stylesheet" href="/css/core/not-legacy.css">
-    <!--[endif] -->
 </head>
 <body>
-<div class="old-browser" style="display: none;">
+<div id="old-browser" style="display: none;">
     LEGACY BROWSER DETECTED
 </div>
 <div id="noscript">
@@ -31,6 +26,13 @@
     document.getElementById('noscript').remove();
 </script>
 {% block body %}{% endblock %}
+<script>
+    var browserDetector = new BrowserDetector();
+    if(browserDetector.browser === 'Explorer' &&  browserDetector.version <= 9){
+        document.getElementById('old-browser').style.display = 'block';
+        document.getElementById('root').className = 'legacy';
+    }
+</script>
 </body>
 <!--<script src="/fonts/all.min.js"></script>-->
 {% block bottom_js%}{%endblock%}
