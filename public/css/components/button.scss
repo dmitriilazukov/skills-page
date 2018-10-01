@@ -1,0 +1,14 @@
+@import "../core/constants";
+
+%base_button {
+  @extend %generic_shadow;
+  background-color: $system_default_color;
+  min-width: 50px;
+  max-width: 100px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  &_clicked {
+    @extend %generic_shadow_inverted;
+  }
+}

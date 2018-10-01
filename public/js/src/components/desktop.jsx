@@ -116,6 +116,7 @@ export default class Desktop extends React.Component {
     spawnWindow = (windowParams) => {
         windowParams.store = this.props.appState;
         windowParams.active = this.props.appState.activeWindowId === windowParams.windowId;
+        windowParams.closeShown = this.hasButtonOption(windowParams, HEADER_BUTTON_OPTION.CLOSE);
         windowParams.collapseShown = this.hasButtonOption(windowParams, HEADER_BUTTON_OPTION.COLLAPSE);
         windowParams.fullscreenShown = this.hasButtonOption(windowParams, HEADER_BUTTON_OPTION.FULLSCREEN);
         return React.createElement(windowParams.element, windowParams);
@@ -124,7 +125,7 @@ export default class Desktop extends React.Component {
     render() {
         const appState = this.props.appState;
         const that = this;
-        const desktopItems = appState.windows.map((i) => <DesktopIcon targetWindow={i.windowId}
+        const desktopItems = appState.windows.map((i) => i.desktopHidden ? null : <DesktopIcon targetWindow={i.windowId}
                                                                       selected={appState.desktopSelectedItems.filter((el) => el === i.windowId).length !== 0}
                                                                       img={i.img} text={i.title}/>);
         const windows = this.props.appState.windows.map((i) => that.spawnWindow(i));

@@ -2,11 +2,13 @@ import {observable} from 'mobx';
 import cookie from 'react-cookies';
 import Window from './components/window';
 import Directory from './components/directory';
+import WarningWindow from './components/warning_window'
 
 const ICONS_BASE_URL = '/images/icons/';
 const ELEMENTS = {
     WINDOW: Window,
-    DIRECTORY: Directory
+    DIRECTORY: Directory,
+    WARNING_WINDOW: WarningWindow
 };
 
 const ICONS = {
@@ -15,12 +17,18 @@ const ICONS = {
     DESKTOP: ICONS_BASE_URL + 'desktop.png',
     EXPLORER: ICONS_BASE_URL + 'explorer.png',
     EXPLORER_PAGE: ICONS_BASE_URL + 'explorer_page.png',
-    DIRECTORY: ICONS_BASE_URL + 'directory.png'
+    DIRECTORY: ICONS_BASE_URL + 'directory.png',
+    WORLD: ICONS_BASE_URL + 'world.png',
+    WINDOWS_WORLD: ICONS_BASE_URL + 'windows_world.png'
 };
+
+const copyrightShown = cookie.load('copyright_shown') === 'true';
+const cookieShown = cookie.load('cookie_shown') === 'true';
 
 export const HEADER_BUTTON_OPTION = {
     FULLSCREEN: 'FULLSCREEN',
-    COLLAPSE: 'COLLAPSE'
+    COLLAPSE: 'COLLAPSE',
+    CLOSE: 'CLOSE'
 };
 
 export const START_PRESET = {
@@ -48,7 +56,8 @@ const WINDOWS = [
         'left': 10,
         'width': 350,
         'height': 350,
-        'headerIcons': [HEADER_BUTTON_OPTION.COLLAPSE]
+        'resizable': true,
+        'headerIcons': [HEADER_BUTTON_OPTION.COLLAPSE, HEADER_BUTTON_OPTION.CLOSE]
     },
     {
         'windowId': 'MY_RESUME',
@@ -62,7 +71,44 @@ const WINDOWS = [
         'left': 10,
         'width': '95%',
         'height': '95%',
-        'headerIcons': [HEADER_BUTTON_OPTION.FULLSCREEN, HEADER_BUTTON_OPTION.COLLAPSE]
+        'resizable': true,
+        'headerIcons': [HEADER_BUTTON_OPTION.FULLSCREEN, HEADER_BUTTON_OPTION.COLLAPSE, HEADER_BUTTON_OPTION.CLOSE]
+    },
+    {
+        'windowId': 'cookieWarning',
+        'element': ELEMENTS.WARNING_WINDOW,
+        'title': 'Cookies',
+        'img': ICONS.WORLD,
+        'hidden': cookieShown,
+        'fullscreen': false,
+        'collapsed': false,
+        'top': 30,
+        'left': 30,
+        'width': 300,
+        'height': 200,
+        'headerIcons': [],
+        'resizable': false,
+        'desktopHidden': true,
+        'cookieFlag': 'cookie_shown',
+        'warningText': window.initialState.cookiesText
+    },
+    {
+        'windowId': 'copyrightWarning',
+        'element': ELEMENTS.WARNING_WINDOW,
+        'title': 'Copyright',
+        'img': ICONS.WINDOWS_WORLD,
+        'hidden': copyrightShown,
+        'fullscreen': false,
+        'desktopHidden': true,
+        'collapsed': false,
+        'top': 10,
+        'left': 10,
+        'width': 300,
+        'height': 200,
+        'headerIcons': [],
+        'cookieFlag': 'copyright_shown',
+        'resizable': false,
+        'warningText': window.initialState.copyrightText
     }
 ];
 

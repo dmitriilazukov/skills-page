@@ -8,7 +8,9 @@ router.get('/', function (req, res) {
         'startButtonText': t('Start'),
         'projectsText': t('Projects'),
         'resumeText': t('Resume'),
-        'shutdownText': t('Shutdown')
+        'shutdownText': t('Shutdown'),
+        'copyrightText': t('COPYRIGHT_TEXT'),
+        'cookiesText': t('COOKIES_TEXT')
     });
     res.render('index', {title: 'Express', initialState: initialState});
 });

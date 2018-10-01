@@ -54,13 +54,13 @@ class Window extends React.Component {
             window.removeEventListener('touchmove', this.onHeaderMouseMove);
             window.removeEventListener('touchend', this.onHeaderMouseUp);
         }
-        if (this.state.borderResizing && !state.borderResizing) {
+        if (this.state.borderResizing && !state.borderResizing && this.props.resizable) {
             window.addEventListener('mousemove', this.onBorderResize);
             window.addEventListener('touchmove', this.onBorderResize);
             window.addEventListener('mouseup', this.onBorderRelease);
             window.addEventListener('touchend', this.onBorderRelease);
         }
-        else if (!this.state.borderResizing && state.borderResizing) {
+        else if (!this.state.borderResizing && state.borderResizing && this.props.resizable) {
             window.removeEventListener('mousemove', this.onBorderResize);
             window.removeEventListener('touchmove', this.onBorderResize);
             window.removeEventListener('mouseup', this.onBorderRelease);
@@ -214,7 +214,6 @@ class Window extends React.Component {
     };
 
 
-
     render() {
         const windowId = 'window-' + this.props.windowId;
         const isActive = this.props.active;
@@ -225,6 +224,7 @@ class Window extends React.Component {
             left: this.props.fullscreen ? 0 : this.state.left,
             zIndex: isActive ? ACTIVE_Z_INDEX : BASE_Z_INDEX
         };
+        const closeShown = this.props.closeShown;
         const collapseShown = this.props.collapseShown;
         const fullscreenShown = this.props.fullscreenShown;
         const {img, title} = this.props;
@@ -275,9 +275,11 @@ class Window extends React.Component {
                          onMouseDown={this.onHeaderMouseDown}>
                         <img src={img} alt={title} className="window__header-img"/>
                         <div className="window__header-title">{this.props.title}</div>
-                        <div className="window__header-button" onClick={this.hideWindow}>
-                            <i className="fa fa-times"/>
-                        </div>
+                        {closeShown ?
+                            <div className="window__header-button" onClick={this.hideWindow}>
+                                <i className="fa fa-times"/>
+                            </div>
+                            : null}
                         {fullscreenShown ?
                             !this.props.fullscreen ?
                                 <div className="window__header-button"
