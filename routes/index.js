@@ -12,6 +12,7 @@ router.get('/', function (req, res) {
         'copyrightText': t('COPYRIGHT_TEXT'),
         'cookiesText': t('COOKIES_TEXT')
     });
+    let env = process.env;
     res.render('index', {title: t('WEBSITE_TITLE'), initialState: initialState});
 });
 

@@ -7,6 +7,7 @@
     "start-dev": "supervisor -e html ./bin/www",
     "build-production": "webpack --progress --config webpack.prod.js",
     "build-dev": "webpack --progress --config webpack.dev.js",
+    "debug": "node %NODE_DEBUG_OPTION% ./bin/www",
     "dev": "npm run build-dev && concurrently --kill-others \"npm run start-dev\" \"webpack --watch --config webpack.dev.js\""
   },
   "dependencies": {
