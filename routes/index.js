@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
         'copyrightText': t('COPYRIGHT_TEXT'),
         'cookiesText': t('COOKIES_TEXT')
     });
-    res.render('index', {title: 'Express', initialState: initialState});
+    res.render('index', {title: t('WEBSITE_TITLE'), initialState: initialState});
 });
 
 module.exports = router;
