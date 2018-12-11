@@ -53,7 +53,7 @@ const WINDOWS = [
         'title': window.initialState.projectsText,
         'element': ELEMENTS.PROJECTS,
         'img': ICONS.DIRECTORY,
-        'hidden': false,
+        'hidden': true,
         'fullscreen': false,
         'collapsed': false,
         'top': 10,
