@@ -2,13 +2,15 @@ import {observable} from 'mobx';
 import cookie from 'react-cookies';
 import Window from './components/window';
 import Directory from './components/directory';
-import WarningWindow from './components/warning_window'
+import WarningWindow from './components/warning_window';
+import ResumeApp from './components/resume_app';
 
 const ICONS_BASE_URL = '/images/icons/';
 const ELEMENTS = {
     WINDOW: Window,
     DIRECTORY: Directory,
-    WARNING_WINDOW: WarningWindow
+    WARNING_WINDOW: WarningWindow,
+    RESUME_APP: ResumeApp
 };
 
 const ICONS = {
@@ -61,7 +63,7 @@ const WINDOWS = [
     },
     {
         'windowId': 'MY_RESUME',
-        'element': ELEMENTS.WINDOW,
+        'element': ELEMENTS.RESUME_APP,
         'title': window.initialState.resumeText + '.html',
         'img': ICONS.EXPLORER_PAGE,
         'hidden': true,

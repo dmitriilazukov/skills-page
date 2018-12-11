@@ -7,7 +7,7 @@
   flex-basis: auto;
   flex-direction: column;
   align-content: flex-start;
-  height: calc(100% - #{$taskbar_height});
+  height: calc(100% - #{$taskbar_height} - #{$generic_shadow_size});
   background-color: $desktop_background_color;
   &__selection {
     position: fixed;

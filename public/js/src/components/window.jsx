@@ -108,6 +108,8 @@ class Window extends React.Component {
     };
 
     resizeBorder = (e) => {
+        const MIN_WIDTH = 250;
+        const MIN_HEIGHT = 250;
         const {clientX, clientY} = getClientCoords(e);
         let {width, height} = this.state;
         if (/%/.test(width) || /%/.test(height)) {
@@ -118,8 +120,8 @@ class Window extends React.Component {
         this.setState({width: width, height: height});
         if (this._resizeClientX && this._resizeClientY) {
             let {top, left, width, height} = this.state;
-            const offsetX = -this._resizeClientX + clientX;
-            const offsetY = -this._resizeClientY + clientY;
+            let offsetX = -this._resizeClientX + clientX;
+            let offsetY = -this._resizeClientY + clientY;
             this._resizeClientX = clientX;
             this._resizeClientY = clientY;
             switch (this._targetBorder) {

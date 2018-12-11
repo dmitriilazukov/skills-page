@@ -7,8 +7,8 @@
   }
   display: flex;
   flex-direction: column;
-  min-width: 150px;
-  min-height: 150px;
+  min-width: 250px !important;
+  min-height: 250px !important;
   max-width: calc(100%);
   position: absolute;
   cursor: default;
@@ -60,8 +60,10 @@
     }
   }
   &__body {
-    width: 100%;
-    height: calc(100% - #{$window_header_height});
+    @extend %generic_shadow_inverted;
+    width: calc(100% - #{$generic_shadow_size});
+    height: calc(100% - #{$window_header_height + $generic_shadow_size*2});
+    overflow: auto;
   }
   &_hidden {
     display: none !important;
