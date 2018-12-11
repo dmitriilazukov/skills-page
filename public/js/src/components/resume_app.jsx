@@ -47,7 +47,7 @@ export default class ResumeApp extends React.Component {
                                 <li>Html, CSS, JS, AJAX</li>
                                 <li>ReactJS, Jquery</li>
                                 <li>RESTful API</li>
-                                <li>SQL (Postgres, MSSQL)</li>
+                                <li>SQL (Postgresql, MSSQL)</li>
                                 <li>ООП, MVC</li>
                                 <li>Celery, Redis</li>
                             </ul>
