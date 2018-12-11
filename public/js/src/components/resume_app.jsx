@@ -17,13 +17,18 @@ export default class ResumeApp extends React.Component {
                         <h2 className='resume__title resume__title-padded'>Лазуков Дмитрий</h2>
                         <h4 className='resume__subtitle resume__subtitle-centerd'>Middle Fullstack Python developer</h4>
                         <div className='resume__subtitle resume__subtitle-centerd'>
-                            <i>Email:</i> <a href="mailto:dmitriilazukov@gmail.com"
+                            <i>Email:</i> <a href="mailto:dmitriilazukov@gmail.com?subject=Просмотр резюме"
                                              target='_blank' onClick={this.linkClick}>dmitriilazukov@gmail.com</a>
                         </div>
                         <div className='resume__subtitle resume__subtitle-centerd'>
                             <i>Github:</i> <a href="https://github.com/dmitriilazukov" onClick={this.linkClick}
                                               target='_blank'>https://github.com/dmitriilazukov</a>
                         </div>
+                        <div className='resume__subtitle resume__subtitle-centerd'>
+                            <i>Telegram:</i> <a href="tg://resolve?domain=dmitriilazukov" onClick={this.linkClick}>
+                            @dmitriilazukov</a>
+                        </div>
+
                         <hr/>
                         <h3 className='resume__subtitle resume__subtitle-underlined'>О себе:</h3>
                         <p className='resume__text'>

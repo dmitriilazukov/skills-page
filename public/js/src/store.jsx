@@ -2,6 +2,7 @@ import {observable} from 'mobx';
 import cookie from 'react-cookies';
 import Window from './components/window';
 import Directory from './components/directory';
+import Projects from './components/projects';
 import WarningWindow from './components/warning_window';
 import ResumeApp from './components/resume_app';
 
@@ -9,6 +10,7 @@ const ICONS_BASE_URL = '/images/icons/';
 const ELEMENTS = {
     WINDOW: Window,
     DIRECTORY: Directory,
+    PROJECTS: Projects,
     WARNING_WINDOW: WarningWindow,
     RESUME_APP: ResumeApp
 };
@@ -49,15 +51,15 @@ const WINDOWS = [
     {
         'windowId': 'MY_PROJECTS',
         'title': window.initialState.projectsText,
-        'element': ELEMENTS.DIRECTORY,
+        'element': ELEMENTS.PROJECTS,
         'img': ICONS.DIRECTORY,
-        'hidden': true,
+        'hidden': false,
         'fullscreen': false,
         'collapsed': false,
         'top': 10,
         'left': 10,
-        'width': 350,
-        'height': 350,
+        'width': '95%',
+        'height': '95%',
         'resizable': true,
         'headerIcons': [HEADER_BUTTON_OPTION.COLLAPSE, HEADER_BUTTON_OPTION.CLOSE]
     },
