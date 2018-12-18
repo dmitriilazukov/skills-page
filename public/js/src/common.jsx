@@ -43,7 +43,7 @@ export function renderResumeContent() {
                     <i>Готовность к переезду:</i> <b>Не готов</b>
                 </div>
                 <div className='resume__subtitle resume__subtitle-centered '>
-                    <i>Уровень английского:</i> <b>Разговорный, читаю проффесиональную литературу</b>
+                    <i>Уровень английского:</i> <b>Разговорный, читаю профессиональную литературу</b>
                 </div>
                 <hr/>
                 <h3 className='resume__subtitle resume__subtitle-underlined'>О себе:</h3>
