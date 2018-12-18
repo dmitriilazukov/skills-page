@@ -68,7 +68,7 @@ const WINDOWS = [
         'element': ELEMENTS.RESUME_APP,
         'title': window.initialState.resumeText + '.html',
         'img': ICONS.EXPLORER_PAGE,
-        'hidden': false,
+        'hidden': true,
         'fullscreen': false,
         'collapsed': false,
         'top': 10,
