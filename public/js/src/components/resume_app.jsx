@@ -24,11 +24,18 @@ export default class ResumeApp extends React.Component {
                             <i>Github:</i> <a href="https://github.com/dmitriilazukov" onClick={this.linkClick}
                                               target='_blank'>https://github.com/dmitriilazukov</a>
                         </div>
-                        <div className='resume__subtitle resume__subtitle-centerd'>
+                        <div className='resume__subtitle resume__subtitle-centerd resume__contact'>
                             <i>Telegram:</i> <a href="tg://resolve?domain=dmitriilazukov" onClick={this.linkClick}>
                             @dmitriilazukov</a>
                         </div>
-
+                        <div className='resume__subtitle resume__subtitle-centerd resume__contact'>
+                            <i>Телефон:</i> <a href="callto:+79995493629" onClick={this.linkClick}>
+                            +7 (999) 549 36-29</a>
+                        </div>
+                        <div className='resume__subtitle resume__subtitle-centerd resume__contact'>
+                            <i>Skype:</i> <a href="Skype:live:704ca95fc030a59b?userinfo" onClick={this.linkClick}>
+                            live:704ca95fc030a59b</a>
+                        </div>
                         <hr/>
                         <h3 className='resume__subtitle resume__subtitle-underlined'>О себе:</h3>
                         <p className='resume__text'>
@@ -42,15 +49,81 @@ export default class ResumeApp extends React.Component {
                             </li>
                         </ul>
                         <h3 className='resume__subtitle resume__subtitle-underlined'>Навыки:</h3>
-                            <ul>
-                                <li>Python, Django</li>
-                                <li>Html, CSS, JS, AJAX</li>
-                                <li>ReactJS, Jquery</li>
-                                <li>RESTful API</li>
-                                <li>SQL (Postgresql, MSSQL)</li>
-                                <li>ООП, MVC</li>
-                                <li>Celery, Redis</li>
-                            </ul>
+                        <table style={{'marginLeft': '15px'}}>
+                            <tr>
+                                <td>Python, Django</td>
+                                <td>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star-o'/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Html, CSS, JS, AJAX</td>
+                                <td>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star-o'/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RESTful API</td>
+                                <td>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star-o'/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ООП, MVC</td>
+                                <td>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star-o'/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ReactJS, Jquery</td>
+                                <td>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star-o'/>
+                                    <i className='fa fa-star-o'/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>SQL (Postgresql, MSSQL)</td>
+                                <td>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star-o'/>
+                                    <i className='fa fa-star-o'/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Celery, Redis</td>
+                                <td>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star'/>
+                                    <i className='fa fa-star-o'/>
+                                    <i className='fa fa-star-o'/>
+                                    <i className='fa fa-star-o'/>
+                                </td>
+                            </tr>
+
+                        </table>
                         <h3 className='resume__subtitle resume__subtitle-underlined'>Опыт работы:</h3>
                         <ul>
                             <li>

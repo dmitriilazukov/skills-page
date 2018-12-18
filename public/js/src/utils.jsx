@@ -1,6 +1,6 @@
 export function preventEventPropagation(e) {
     if (!e.touches) {
-        e.preventDefault();
+        //e.preventDefault();
         e.stopPropagation();
     }
 }

@@ -240,7 +240,7 @@ class Window extends React.Component {
                 key={windowId} style={style}
                 onTouchEnd={this.onWindowClick}
                 onClick={this.onWindowClick}>
-                <div className="window__border">
+                {/*<div className="window__border">*/}
                     <div className="window__border-left"
                          data-border={BORDER.LEFT}
                          onTouchStart={this.onBorderClick}
@@ -305,7 +305,7 @@ class Window extends React.Component {
                         {this.props.children}
                     </div>
                 </div>
-            </div>
+            // </div>
         )
     }
 }

@@ -9,9 +9,9 @@
   flex-direction: column;
   min-width: 250px !important;
   min-height: 250px !important;
-  max-width: calc(100%);
+  //max-width: calc(100%);
   position: absolute;
-  cursor: default;
+  //cursor: default;
   background-color: $system_default_color;
   &__header {
     padding-left: 5px;
@@ -61,8 +61,8 @@
   }
   &__body {
     @extend %generic_shadow_inverted;
-    width: calc(100% - #{$generic_shadow_size});
-    height: calc(100% - #{$window_header_height + $generic_shadow_size*2});
+    width: calc(100% - #{$generic_shadow_size*0});
+    height: calc(100% - #{$window_header_height - $generic_shadow_size*0});
     overflow: auto;
   }
   &_hidden {

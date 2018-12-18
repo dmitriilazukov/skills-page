@@ -64,6 +64,8 @@ export default class Desktop extends React.Component {
     };
 
     onDesktopMouseMove = (e) => {
+        // disabling selection due its killing usability
+        return;
         const {clientX, clientY} = getClientCoords(e);
         if (!this._selectionClientX || !this._selectionClientY) {
             this._selectionClientX = clientX;

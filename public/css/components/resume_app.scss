@@ -7,6 +7,9 @@
   overflow: auto;
   min-width: 300px;
   min-height: 300px;
+  &__contact{
+    user-select: text;
+  }
   &__body {
     padding: 20px;
   }
