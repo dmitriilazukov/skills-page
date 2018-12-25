@@ -1,7 +1,17 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-  <h1>{{message}}</h1>
-  <h2>{{error.status}}</h2>
-  <pre>{{error.stack}}</pre>
+    <div class="bsod">
+        <div class="bsod__body">
+            <div class="bsod__main_message">
+                {{ error.status }} &nbsp;{{ message }}
+            </div>
+            <div class="bsod__sub_message">
+                Press <a href="/">here</a> to continue...
+            </div>
+        </div>
+    </div>
+    {#<h1>{{message}}</h1>#}
+    {#<h2>{{error.status}}</h2>#}
+    {#<pre>{{error.stack}}</pre>#}
 {% endblock %}

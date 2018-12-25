@@ -1,0 +1,30 @@
+@import "../core/constants";
+
+.bsod {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: $system_highlight_color;
+  justify-content: center;
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+  }
+  &__main_message {
+    text-align: center;
+    background-color: $system_default_color;
+    color: $system_highlight_color;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  &__sub_message {
+    color: $system_default_color;
+  }
+  &__sub_message > a{
+    color: $system_default_color;
+  }
+}
