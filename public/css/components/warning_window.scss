@@ -24,6 +24,7 @@
   &__button {
     @extend %base_button;
     align-self: center;
+    cursor: pointer;
     &_clicked{
       @extend %base_button_clicked;
     }

@@ -64,6 +64,11 @@
     width: calc(100% - #{$generic_shadow_size*0});
     height: calc(100% - #{$window_header_height - $generic_shadow_size*0});
     overflow: auto;
+    &-noshadow {
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+    }
   }
   &_hidden {
     display: none !important;

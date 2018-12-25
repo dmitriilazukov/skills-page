@@ -7,7 +7,7 @@
   left: 3px;
   bottom: #{0 - $generic_shadow_size*2};
   width: $start_menu_width;
-  height: 300px;
+  height: 204px;
   display: flex;
   z-index: 40;
   &__logo {
@@ -53,6 +53,10 @@
     }
     &-img {
       display: flex;
+      margin: 5px;
+      height: 40px;
+      width: 40px;
+      align-self: center;
     }
   }
 }

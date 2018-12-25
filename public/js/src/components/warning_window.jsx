@@ -12,7 +12,7 @@ export default class WarningWindow extends React.Component {
 
     render() {
         return (
-            <Window {...this.props}>
+            <Window {...this.props} noshadow={true}>
                 <div className="warning">
                     <img className="warning__icon" src={this.props.img}/>
                     <div className="warning__text">

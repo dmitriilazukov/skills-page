@@ -6,6 +6,7 @@ export default class StartMenu extends React.Component {
     render() {
         const startMenuOpened = this.props.startMenuOpened;
         const startMenuItems = this.props.startMenuItems.map((i) => <StartMenuItem key={i.text}
+                                                                                   windowId={i.windowId}
                                                                                    img={i.img}
                                                                                    line={i.line}
                                                                                    text={i.text}/>);

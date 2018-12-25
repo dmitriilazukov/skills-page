@@ -41,9 +41,25 @@ export const START_PRESET = {
 
 const START_MENU_ITEMS = [
     {
-        'img': ICONS.SHUTDOWN,
-        'text': window.initialState.shutdownText,
+        'windowId': 'MY_RESUME',
+        'text': window.initialState.resumeText + '.html',
+        'img': ICONS.EXPLORER_PAGE,
         'line': 'top'
+    },
+    {
+        'windowId': 'MY_PROJECTS',
+        'text': window.initialState.projectsText,
+        'img': ICONS.DIRECTORY
+    },
+    {
+        'windowId': 'cookieWarning',
+        'text': 'Cookies',
+        'img': ICONS.WORLD,
+    },
+    {
+        'windowId': 'copyrightWarning',
+        'text': 'Copyright',
+        'img': ICONS.WINDOWS_WORLD,
     }
 ];
 

@@ -301,7 +301,9 @@ class Window extends React.Component {
                             </div>
                             : null}
                     </div>
-                    <div className="window__body">
+                    <div className={cn({
+                        "window__body-noshadow": this.props.noshadow
+                    }, "window__body")}>
                         {this.props.children}
                     </div>
                 </div>
