@@ -36,8 +36,8 @@ export function renderResumeContent() {
                 </div>
                 <div
                     className='resume__subtitle resume__subtitle-centered resume__contact '>
-                    <i>Skype:</i> <a href="Skype:live:704ca95fc030a59b?userinfo">
-                    live:704ca95fc030a59b</a>
+                    <i>Skype:</i> <a href="Skype:live:dmitriilazukov?userinfo">
+                    live:dmitriilazukov</a>
                 </div>
                 <div className='resume__subtitle resume__subtitle-centered '>
                     <i>Готовность к переезду:</i> <b>Не готов</b>
